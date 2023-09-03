@@ -52,6 +52,14 @@ function change(){
 
     document.getElementById("watch").style.display = "block"
     document.getElementById("cntrl").style.display = "none"
+    document.getElementById("nwCntrl").style.display = "block"
+    document.getElementById("controls").style.display = "block"
+    clearInterval(interval)
+    interval = null;
+    time_el.innerText = '00:00:00'
+    
+    // start();
+    
 }
 function update_timer(){
     if(time == 0) {
@@ -72,6 +80,7 @@ function update_timer(){
 }
 let time;
 function newChange(){
+    clearInterval(interval);
     time_el.innerText = '00:00'
     document.getElementById("watch").style.display = "block"
     document.getElementById("controls").style.display = "none"
